@@ -10,6 +10,12 @@ helm repo add alibaba-rsocket-broker https://alibaba-rsocket-broker.github.io/he
 helm install rsocket-broker alibaba-rsocket-broker/alibaba-rsocket-broker
 ```
 
+To test RSocket Broker services, please try
+
+```
+kubectl run -i --rm --tty rsocket-box --image=linuxchina/rsocket-box --restart=Never --image-pull-policy=Always
+```
+
 # References
 
 * Alibaba RSocket Broker: https://github.com/alibaba/alibaba-rsocket-broker
