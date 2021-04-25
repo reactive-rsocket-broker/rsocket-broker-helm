@@ -20,7 +20,7 @@ spec:
             - containerPort: 9997
             - containerPort: 9998
             - containerPort: 9999
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: {{ .Values.broker.pullPolicy }}
           env:
             - name: "SPRING_PROFILES_ACTIVE"
               value: "kubernetes"
