@@ -97,3 +97,4 @@ modules.xml
 # End of https://www.toptal.com/developers/gitignore/api/helm,jetbrains+all
 
 secret/
+alibaba-rsocket-broker-*.tgz
