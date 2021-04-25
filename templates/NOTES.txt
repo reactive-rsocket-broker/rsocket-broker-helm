@@ -1,5 +1,5 @@
 Thank you for installing {{ .Chart.Name }}.
-Alibaba RSocket Broker has been deployed into rsocket namespace in your Kubernetes cluster.
+Alibaba RSocket Broker has been deployed with 'rsocket-broker.rsocket.svc.cluster.local' dns name.
 To learn more about the release, try:
 
    $ helm status {{ .Release.Name }}
