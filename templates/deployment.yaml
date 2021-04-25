@@ -24,6 +24,14 @@ spec:
           env:
             - name: "SPRING_PROFILES_ACTIVE"
               value: "kubernetes"
+            {{- if ne .Values.broker.jwtRSAPubKey ""}}
+            - name: "RSOCKET_BROKER_AUTH_REQUIRED"
+              value: "true"
+            {{- end }}
+            {{- if ne .Values.broker.tlsKeyStore ""}}
+            - name: "RSOCKET_BROKER_SSL_ENABLED"
+              value: "true"
+            {{- end }}
           livenessProbe:
             httpGet:
               path: /actuator/health/liveness
