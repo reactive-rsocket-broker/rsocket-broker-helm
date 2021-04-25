@@ -1,8 +1,6 @@
 Alibaba RSocket Broker Helm chart
 =================================
 
-# Alibaba RSocket Broker
-
 Alibaba RSocket Broker is a communication system between broad range of applications using RSocket protocol.
 
 # TL;DR;
