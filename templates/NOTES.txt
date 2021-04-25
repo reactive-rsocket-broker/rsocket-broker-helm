@@ -1,9 +1,8 @@
 Thank you for installing {{ .Chart.Name }}.
 Alibaba RSocket Broker has been deployed with 'rsocket-broker.rsocket.svc.cluster.local' dns name.
-To learn more about the release, try:
+To test RSocket services, try:
 
-   $ helm status {{ .Release.Name }}
-   $ helm get all {{ .Release.Name }}
+   $ kubectl run -i --rm --tty rsocket-box --image=linuxchina/rsocket-box --restart=Never --image-pull-policy=Always
 
 You can find more information about Alibaba RSocket Broker in the Github:
    https://github.com/alibaba/alibaba-rsocket-broker
