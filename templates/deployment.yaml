@@ -42,7 +42,27 @@ spec:
             preStop:
               exec:
                 command: [ "sh", "-c", "sleep 30" ]
-      restartPolicy: Always
+          {{- if .Values.broker.secure }}
+          volumeMounts:
+            - name: rsocket-dir
+              mountPath: "/home/cnb/.rsocket"
+              readOnly: true
+          {{- end }}
+      {{- if .Values.broker.secure }}
+      volumes:
+        - name: rsocket-dir
+          secret:
+            secretName: rsocket-broker-secrets
+            items:
+              {{- if ne .Values.broker.jwtRSAPubKey ""}}
+              - key: jwtRSAPubKey
+                path: jwt_rsa.pub
+              {{- end }}
+              {{- if ne .Values.broker.tlsKeyStore ""}}
+              - key: tlsKeyStore
+                path: rsocket.p12
+              {{- end }}
+      {{- end }}
   selector:
     matchLabels:
       app: rsocket-broker
