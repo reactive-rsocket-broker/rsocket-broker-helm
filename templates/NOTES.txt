@@ -1,0 +1,9 @@
+Thank you for installing {{ .Chart.Name }}.
+Alibaba RSocket Broker has been deployed into rsocket namespace in your Kubernetes cluster.
+To learn more about the release, try:
+
+   $ helm status {{ .Release.Name }}
+   $ helm get all {{ .Release.Name }}
+
+You can find more information about Alibaba RSocket Broker in the Github:
+   https://github.com/alibaba/alibaba-rsocket-broker
