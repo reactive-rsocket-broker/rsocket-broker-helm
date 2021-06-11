@@ -6,7 +6,7 @@
 replicaCount: 1
 
 broker:
-  version: "1.1.1-SNAPSHOT"
+  version: "1.1.1"
   pullPolicy: IfNotPresent
   # secure or not, JWT or TLS store
   secure: false
