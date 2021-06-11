@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 1.1.0
+appVersion: 1.1.1
 description: A Helm chart for Alibaba RSocket Broker
 name: alibaba-rsocket-broker
 icon: https://rsocket.io/img/r-socket-pink.svg
@@ -8,7 +8,7 @@ keywords:
   - rsocket
   - broker
   - reactive
-version: 0.1.0
+version: 0.1.1
 home: https://github.com/alibaba/alibaba-rsocket-broker
 sources:
   - https://github.com/alibaba/alibaba-rsocket-broker
